@@ -689,17 +689,13 @@ export default function DailyPhoneLanding() {
 
                     {selectedModel && selectedService && (
                       <div className="mt-8 p-6 bg-gradient-to-r from-[#87CEEB] to-[#6BB6D6] rounded-xl text-slate-800 animate-in slide-in-from-bottom-5 duration-300 shadow-2xl">
-                        <div className="flex items-center justify-between">
+                        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between space-y-4 sm:space-y-0 sm:space-x-4">
                           <div>
                             <h3 className="text-xl font-bold mb-2">
                               {getServiceDisplayName(selectedService)} für {selectedModel}
                             </h3>
                             <p className="text-slate-700 mb-4">Professionelle Reparatur mit 12 Monaten Garantie</p>
                             <div className="flex items-center space-x-4 text-sm">
-                              <div className="flex items-center">
-                                <CheckCircle className="h-4 w-4 mr-1" />
-                                Original Ersatzteile
-                              </div>
                               <div className="flex items-center">
                                 <Zap className="h-4 w-4 mr-1" />
                                 Express möglich
@@ -710,7 +706,7 @@ export default function DailyPhoneLanding() {
                               </div>
                             </div>
                           </div>
-                          <div className="text-right">
+                          <div className="sm:text-right text-center sm:min-w-[160px]">
                             <div className="text-3xl font-bold mb-2">
                               {getPriceForSelection(selectedBrand, selectedModel, selectedService)}€
                             </div>
