@@ -771,11 +771,27 @@ export default function DailyPhoneLanding() {
                                 12 Monate Garantie
                               </div>
                             </div>
-                            //shshh
                           </div>
                           <div className="sm:text-right text-center sm:min-w-[160px]">
                             <div className="text-3xl font-bold mb-2">
-                              {getPriceForSelection(selectedBrand, selectedModel, selectedService)}€
+                              {(() => {
+                                const price = getPriceForSelection(selectedBrand, selectedModel, selectedService);
+                                // Custom display logic for Display-Reparatur with Prime/Original
+                                if (
+                                  selectedService === "display" &&
+                                  typeof price === "string" &&
+                                  price.includes("/")
+                                ) {
+                                  return (
+                                    <>
+                                      <span>Prime: {price.split("/")[0].trim()}€</span>
+                                      <br />
+                                      <span>Original: {price.split("/")[1].replace("€", "").trim()}€</span>
+                                    </>
+                                  );
+                                }
+                                return <span>{price}€</span>;
+                              })()}
                             </div>
                             <p className="text-slate-700 text-sm">inkl. MwSt.</p>
                           </div>
@@ -785,12 +801,10 @@ export default function DailyPhoneLanding() {
                             className="bg-slate-800 text-white hover:bg-slate-700 flex-1 shadow-lg hover:shadow-xl transition-all duration-300 rounded-full"
                             onClick={() => window.open("https://wa.me/4917642945792", "_blank")}
                           >
-
                             <MessageCircle className="h-4 w-4 mr-2" />
                             Jetzt per WhatsApp buchen
                           </Button>
                           <Button
-                          
                             className="border-2 border-slate-800 text-slate-800 hover:bg-slate-800 hover:text-white flex-1 shadow-lg hover:shadow-xl transition-all duration-300 rounded-full bg-transparent"
                             onClick={() => scrollToSection("contact")}
                           >
