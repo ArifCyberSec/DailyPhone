@@ -384,10 +384,9 @@ export default function DailyPhoneLanding() {
       if (!priceObj) return 99;
       // Service-Key(s) bestimmen
       const keys = serviceMap[service] || [];
-      // Display: Zeige immer den günstigeren (prime vs orig)
+      // Display: Zeige immer beide Preise (prime und orig) als String kombiniert
       if (service === "display") {
-        if ("prime" in priceObj) return priceObj.prime;
-        if ("orig" in priceObj) return priceObj.orig;
+        return `${priceObj.prime}€ / ${priceObj.orig}€`;
       }
       // Akku, Backglass, Kamera
       for (const key of keys) {
