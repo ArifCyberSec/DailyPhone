@@ -294,113 +294,64 @@ export default function DailyPhoneLanding() {
     return serviceNames[service] || service
   }
 
+
   const getPriceForSelection = (brand: string, model: string, service: string) => {
-    const basePrices: { [key: string]: { [key: string]: number } } = {
-      iphone: {
-        display: model.includes("15")
-          ? 189
-          : model.includes("14")
-            ? 169
-            : model.includes("13")
-              ? 149
-              : model.includes("12")
-                ? 129
-                : 109,
-        battery: model.includes("15")
-          ? 89
-          : model.includes("14")
-            ? 79
-            : model.includes("13")
-              ? 69
-              : model.includes("12")
-                ? 59
-                : 49,
-        backglass: model.includes("15")
-          ? 149
-          : model.includes("14")
-            ? 129
-            : model.includes("13")
-              ? 109
-              : model.includes("12")
-                ? 89
-                : 79,
-        camera: model.includes("15")
-          ? 159
-          : model.includes("14")
-            ? 139
-            : model.includes("13")
-              ? 119
-              : model.includes("12")
-                ? 99
-                : 89,
-        charging: 79,
-        speaker: 69,
-      },
-      samsung: {
-        display: model.includes("S24")
-          ? 249
-          : model.includes("S23")
-            ? 229
-            : model.includes("S22")
-              ? 219
-              : model.includes("S21")
-                ? 219
-                : 99,
-        battery: 69,
-        backglass: model.includes("S24") ? 119 : model.includes("S23") ? 99 : model.includes("S22") ? 89 : 79,
-        camera: model.includes("S24") ? 129 : model.includes("S23") ? 109 : 99,
-        charging: 69,
-        speaker: 59,
-      },
-      huawei: {
-        display: model.includes("P60") ? 149 : model.includes("P50") ? 129 : model.includes("P40") ? 109 : 89,
-        battery: 59,
-        backglass: model.includes("P60") ? 99 : model.includes("P50") ? 89 : 79,
-        camera: model.includes("P60") ? 109 : 99,
-        charging: 59,
-        speaker: 49,
-      },
-      xiaomi: {
-        display: model.includes("14") ? 129 : model.includes("13") ? 109 : model.includes("12") ? 89 : 79,
-        battery: 49,
-        backglass: model.includes("14") ? 79 : model.includes("13") ? 69 : 59,
-        camera: model.includes("14") ? 89 : 79,
-        charging: 49,
-        speaker: 39,
-      },
-      oppo: {
-        display: model.includes("Find X7")
-          ? 139
-          : model.includes("Find X6")
-            ? 119
-            : model.includes("Reno 11")
-              ? 99
-              : 89,
-        battery: 49,
-        backglass: model.includes("Find X7") ? 89 : model.includes("Find X6") ? 79 : 69,
-        camera: model.includes("Find X7") ? 99 : 89,
-        charging: 49,
-        speaker: 39,
-      },
-      oneplus: {
-        display: model.includes("12") ? 139 : model.includes("11") ? 119 : model.includes("10") ? 99 : 89,
-        battery: 49,
-        backglass: model.includes("12") ? 89 : model.includes("11") ? 79 : 69,
-        camera: model.includes("12") ? 99 : 89,
-        charging: 49,
-        speaker: 39,
-      },
-      google: {
-        display: model.includes("8") ? 129 : model.includes("7") ? 109 : model.includes("6") ? 89 : 79,
-        battery: 49,
-        backglass: model.includes("8") ? 79 : model.includes("7") ? 69 : 59,
-        camera: model.includes("8") ? 89 : 79,
-        charging: 49,
-        speaker: 39,
-      },
+    const iphonePrices: any = {
+      "11 Pro": { prime: 134, orig: 174, battery: 74, back: 94, glas: 74, cam: 64, camglas: 84 },
+      "11 Pro Max": { prime: 154, orig: 194, battery: 84, back: 104, glas: 84, cam: 74, camglas: 94 },
+      "12 Pro": { prime: 174, orig: 234, battery: 84, back: 104, glas: 94, cam: 84, camglas: 94 },
+      "12 Pro Max": { prime: 194, orig: 254, battery: 84, back: 114, glas: 94, cam: 84, camglas: 94 },
+      "13 Pro": { prime: 224, orig: 274, battery: 84, back: 124, glas: 114, cam: 94, camglas: 114 },
+      "13 Pro Max": { prime: 234, orig: 294, battery: 84, back: 124, glas: 114, cam: 94, camglas: 114 },
+      "14 Pro": { prime: 264, orig: 324, battery: 84, back: 134, glas: 124, cam: 104, camglas: 124 },
+      "14 Pro Max": { prime: 274, orig: 334, battery: 84, back: 134, glas: 124, cam: 104, camglas: 124 },
+      "15 Pro": { prime: 284, orig: 344, battery: 94, back: 144, glas: 134, cam: 114, camglas: 134 },
+      "15 Pro Max": { prime: 294, orig: 354, battery: 94, back: 144, glas: 134, cam: 114, camglas: 134 },
     }
 
-    return basePrices[brand]?.[service] || 99
+    const samsungPrices: any = {
+      "S20+": { orig: 234, battery: 74, glas: 74, small: 74, cam: 74, camglas: 74 },
+      "S21+": { orig: 234, battery: 74, glas: 74, small: 74, cam: 74, camglas: 74 },
+      "S21FE": { orig: 224, battery: 74, glas: 74, small: 74, cam: 74, camglas: 74 },
+      "S22+": { orig: 274, battery: 84, glas: 84, small: 84, cam: 84, camglas: 84 },
+      "S22 Ultra": { orig: 294, battery: 94, glas: 94, small: 94, cam: 94, camglas: 94 },
+    }
+
+    const macbookPrices: any = {
+      "A1706/1707": { lcd: 394, battery: 214, service: 44, labor: 174 },
+      "A1989/1990": { lcd: 394, battery: 214, service: 44, labor: 174 },
+      "A2251/2289": { lcd: 394, battery: 214, service: 44, labor: 174 },
+      "A2338": { lcd: 394, battery: 214, service: 44, labor: 174 },
+      "A2442": { lcd: 394, battery: 214, service: 44, labor: 174 },
+    }
+
+    const serviceMap: any = {
+      display: { iphone: "prime", samsung: "orig", macbook: "lcd" },
+      battery: "battery",
+      backglass: "back",
+      glas: "glas",
+      camera: "cam",
+      charging: "small",
+      speaker: "small",
+    }
+
+    if (brand === "iphone" && iphonePrices[model]) {
+      const entry = iphonePrices[model]
+      if (service === "display") return `${entry["prime"]}€ (Prime) / ${entry["orig"]}€ (Original)`
+      return entry[serviceMap[service]] || "Preis nicht verfügbar"
+    }
+
+    if (brand === "samsung" && samsungPrices[model]) {
+      const entry = samsungPrices[model]
+      return entry[serviceMap[service]] || "Preis nicht verfügbar"
+    }
+
+    if (brand === "macbook" && macbookPrices[model]) {
+      const entry = macbookPrices[model]
+      return entry[serviceMap[service]] || "Preis nicht verfügbar"
+    }
+
+    return "Preis nicht verfügbar"
   }
 
   const handleBrandChange = (brand: string) => {
@@ -705,6 +656,7 @@ export default function DailyPhoneLanding() {
                                 12 Monate Garantie
                               </div>
                             </div>
+                            //shshh
                           </div>
                           <div className="sm:text-right text-center sm:min-w-[160px]">
                             <div className="text-3xl font-bold mb-2">
@@ -718,6 +670,7 @@ export default function DailyPhoneLanding() {
                             className="bg-slate-800 text-white hover:bg-slate-700 flex-1 shadow-lg hover:shadow-xl transition-all duration-300 rounded-full"
                             onClick={() => window.open("https://wa.me/4917642945792", "_blank")}
                           >
+
                             <MessageCircle className="h-4 w-4 mr-2" />
                             Jetzt per WhatsApp buchen
                           </Button>
