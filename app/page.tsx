@@ -324,11 +324,11 @@ export default function DailyPhoneLanding() {
       "14": { prime: 169, orig: 229, battery: 89, back: 109, glas: 99, cam: 89, camglas: 99 },
       "14 Plus": { prime: 179, orig: 239, battery: 89, back: 109, glas: 99, cam: 89, camglas: 99 },
       "14 Pro": { prime: 289, orig: 349, battery: 89, back: 129, glas: 119, cam: 89, camglas: 129 },
-      "14 Pro Max": { prime: 299, orig: 359, battery: 89, back: 139, glas: 129, cam: 89, camglas: 129 },
-      "15": { prime: 219, orig: 279, battery: 99, back: 119, glas: 109, cam: 99, camglas: 109 },
-      "15 Plus": { prime: 229, orig: 289, battery: 99, back: 119, glas: 109, cam: 99, camglas: 109 },
-      "15 Pro": { prime: 369, orig: 409, battery: 99, back: 149, glas: 139, cam: 99, camglas: 139 },
-      "15 Pro Max": { prime: 379, orig: 419, battery: 99, back: 159, glas: 149, cam: 99, camglas: 139 }
+      "14 Pro Max": { prime: 284, orig: 445, battery: 134, back: 369, glas: 129, cam: 89, camglas: 129 },
+      "15": { prime: 284, orig: 334, battery: 104, back: 239, glas: 169, cam: 184, camglas: 154 },
+      "15 Plus": { prime: 384, orig: 434, battery: 134, back: 289, glas: 189, cam: 184, camglas: 134 },
+      "15 Pro": { prime: 335, orig: 379, battery: 134, back: 295, glas: 179, cam: 245, camglas: 174 },
+      "15 Pro Max": { prime: 394, orig: 484, battery: 135, back: 339, glas: 194, cam: 245, camglas: 175 }
     };
 
     // Mapping von UI-Modelnamen auf Preisbaum-Keys
@@ -386,7 +386,7 @@ export default function DailyPhoneLanding() {
       const keys = serviceMap[service] || [];
       // Display: Zeige immer beide Preise (prime und orig) als String kombiniert
       if (service === "display") {
-        return `${priceObj.prime}€ / ${priceObj.orig}€`;
+        return `${priceObj.prime} / ${priceObj.orig}€`;
       }
       // Akku, Backglass, Kamera
       for (const key of keys) {
@@ -772,7 +772,7 @@ export default function DailyPhoneLanding() {
                             </div>
                           </div>
                           <div className="sm:text-right text-center sm:min-w-[160px]">
-                            <div className="text-3xl font-bold mb-2">
+                            <div className="mb-2">
                               {(() => {
                                 const price = getPriceForSelection(selectedBrand, selectedModel, selectedService);
                                 // Custom display logic for Display-Reparatur with Prime/Original
@@ -783,13 +783,13 @@ export default function DailyPhoneLanding() {
                                 ) {
                                   return (
                                     <>
-                                      <span>Prime: {price.split("/")[0].trim()}€</span>
+                                      <span className="text-xl font-semibold">Prime: {price.split("/")[0].trim()}</span>
                                       <br />
-                                      <span>Original: {price.split("/")[1].replace("€", "").trim()}€</span>
+                                      <span className="text-xl font-semibold">Original: {price.split("/")[1].replace("€", "").trim()}€</span>
                                     </>
                                   );
                                 }
-                                return <span>{price}€</span>;
+                                return <span className="text-3xl font-bold">{price}€</span>;
                               })()}
                             </div>
                             <p className="text-slate-700 text-sm">inkl. MwSt.</p>
