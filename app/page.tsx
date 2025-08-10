@@ -579,7 +579,7 @@ export default function DailyPhoneLanding() {
                 <div className="px-4 py-2">
                   <Button
                     className="w-full bg-[#87CEEB] hover:bg-[#6BB6D6] text-slate-800 font-medium py-2 rounded-full transition-all duration-200"
-                    onClick={() => window.open("https://wa.me/4917642945792", "_blank")}
+                    onClick={() => window.open("https://wa.me/03023320906", "_blank")}
                   >
                     <MessageCircle className="h-4 w-4 mr-2" />
                     WhatsApp
@@ -665,7 +665,7 @@ export default function DailyPhoneLanding() {
             <Button
               
               className="border-2 border-[#87CEEB] text-[#87CEEB] hover:bg-[#87CEEB] hover:text-slate-800 px-8 py-4 text-lg font-semibold rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 bg-transparent"
-              onClick={() => window.open("https://wa.me/4917642945792", "_blank")}
+              onClick={() => window.open("https://wa.me/03023320906", "_blank")}
             >
               <MessageCircle className="h-5 w-5 mr-2" />
               WhatsApp
@@ -798,7 +798,7 @@ export default function DailyPhoneLanding() {
                         <div className="mt-6 flex flex-col sm:flex-row gap-3">
                           <Button
                             className="bg-slate-800 text-white hover:bg-slate-700 flex-1 shadow-lg hover:shadow-xl transition-all duration-300 rounded-full"
-                            onClick={() => window.open("https://wa.me/4917642945792", "_blank")}
+                            onClick={() => window.open("https://wa.me/03023320906", "_blank")}
                           >
                             <MessageCircle className="h-4 w-4 mr-2" />
                             Jetzt per WhatsApp buchen
@@ -959,7 +959,7 @@ export default function DailyPhoneLanding() {
                 </p>
                 <Button
                   className="border-2 border-[#87CEEB] text-[#87CEEB] hover:bg-[#87CEEB] hover:text-slate-800 px-8 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300 bg-transparent"
-                  onClick={() => window.open("https://wa.me/4917642945792", "_blank")}
+                  onClick={() => window.open("https://wa.me/03023320906", "_blank")}
                 >
                   <MessageCircle className="h-4 w-4 mr-2" />
                   Handy verkaufen
