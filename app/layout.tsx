@@ -15,7 +15,12 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "DailyPhone",
   icons: {
-    icon: "/favicon.png",
+    icon: [
+      { url: "/favicon.png?v=2", type: "image/png", sizes: "32x32" },
+      { url: "/favicon.ico?v=2", type: "image/x-icon" }
+    ],
+    shortcut: ["/favicon.png?v=2"],
+    apple: ["/favicon.png?v=2"],
   },
 };
 
