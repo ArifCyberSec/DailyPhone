@@ -321,9 +321,9 @@ export default function DailyPhoneLanding() {
       "13": { prime: 159, orig: 209, battery: 79, back: 109, glas: 99, cam: 89, camglas: 99 },
       "13 Pro": { prime: 219, orig: 269, battery: 79, back: 119, glas: 109, cam: 89, camglas: 109 },
       "13 Pro Max": { prime: 229, orig: 279, battery: 79, back: 129, glas: 119, cam: 89, camglas: 109 },
-      "14": { prime: 169, orig: 229, battery: 89, back: 109, glas: 99, cam: 89, camglas: 99 },
-      "14 Plus": { prime: 179, orig: 239, battery: 89, back: 109, glas: 99, cam: 89, camglas: 99 },
-      "14 Pro": { prime: 289, orig: 349, battery: 89, back: 129, glas: 119, cam: 89, camglas: 129 },
+      "14": { prime: 159, orig: 189, battery: 99, back: 109, glas: 99, cam: 89, camglas: 99 },
+      "14 Plus": { prime: 239, orig: 239, battery: 104, back: 289, glas: 165, cam: 179, camglas: 89 },
+      "14 Pro": { prime: 289, orig: 379, battery: 109, back: 289, glas: 199, cam: 235, camglas: 89 },
       "14 Pro Max": { prime: 284, orig: 445, battery: 134, back: 369, glas: 129, cam: 89, camglas: 129 },
       "15": { prime: 284, orig: 334, battery: 104, back: 239, glas: 169, cam: 184, camglas: 154 },
       "15 Plus": { prime: 384, orig: 434, battery: 134, back: 289, glas: 189, cam: 184, camglas: 134 },
@@ -1222,7 +1222,7 @@ export default function DailyPhoneLanding() {
               <div className="flex space-x-4">
                 <Button
                   className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 shadow-lg hover:shadow-xl transition-all duration-300 rounded-full"
-                  onClick={() => window.open("https://wa.me/4917642945792", "_blank")}
+                  onClick={() => window.open("https://wa.me/03023320906", "_blank")}
                 >
                   <MessageCircle className="h-4 w-4 mr-1" />
                   WhatsApp
@@ -1245,7 +1245,7 @@ export default function DailyPhoneLanding() {
               <h4 className="font-semibold mb-4 text-[#87CEEB]">Kontakt</h4>
               <div className="space-y-2 text-gray-400 text-sm">
                 <p>Pallastraße 25, 10781 Berlin</p>
-                <p>Telefon: 0176 4294 5792</p>
+                <p>Telefon: 03023320906</p>
                 <p>Mo-Sa: 10:00-20:00</p>
                 <p>So: Geschlossen</p>
                 <p>dailyphonestore@gmail.com</p>
