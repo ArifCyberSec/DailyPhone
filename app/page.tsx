@@ -297,12 +297,12 @@ export default function DailyPhoneLanding() {
   const getPriceForSelection = (brand: string, model: string, service: string) => {
     // Vollständiger Preisbaum für iPhone-Modelle (alle Preise bereits um 5 € reduziert)
     const iphonePrices: any = {
-      "SE": { prime: 39, orig: 49, battery: 29, back: 39, glas: 39, cam: 39, camglas: 39 },
-      "6": { prime: 49, orig: 59, battery: 29, back: 39, glas: 39, cam: 39, camglas: 39 },
-      "6 Plus": { prime: 49, orig: 59, battery: 29, back: 39, glas: 39, cam: 39, camglas: 39 },
-      "6s": { prime: 49, orig: 59, battery: 29, back: 39, glas: 39, cam: 39, camglas: 39 },
-      "6s Plus": { prime: 49, orig: 59, battery: 29, back: 39, glas: 39, cam: 39, camglas: 39 },
-      "7": { prime: 59, orig: 69, battery: 29, back: 49, glas: 49, cam: 49, camglas: 49 },
+      "SE": { prime: 89, orig: 89, battery: 59, back: 119, glas:119, cam: 79, camglas: 59 },
+      "6": { prime: 59, orig: 59, battery: 39, back: 0, glas: 0, cam: 49, camglas: 0 },
+      "6 Plus": {  prime: 59, orig: 59, battery: 39, back: 0, glas: 0, cam: 49, camglas: 0 },
+      "6s": { prime: 59, orig: 59, battery: 39, back: 0, glas: 0, cam: 49, camglas: 0  },
+      "6s Plus": {  prime: 59, orig: 59, battery: 39, back: 0, glas: 0, cam: 49, camglas: 0 },
+      "7": { prime: 79, orig: 79, battery: 49, back: 109, glas: 109, cam: 69, camglas: 39 },
       "7 Plus": { prime: 69, orig: 79, battery: 29, back: 49, glas: 49, cam: 49, camglas: 49 },
       "8": { prime: 69, orig: 89, battery: 29, back: 59, glas: 49, cam: 49, camglas: 49 },
       "8 Plus": { prime: 79, orig: 99, battery: 29, back: 59, glas: 49, cam: 49, camglas: 49 },
@@ -315,7 +315,7 @@ export default function DailyPhoneLanding() {
       "11 Pro Max": { prime: 149, orig: 189, battery: 79, back: 99, glas: 79, cam: 69, camglas: 89 },
       "12 Mini": { prime: 139, orig: 179, battery: 69, back: 89, glas: 79, cam: 69, camglas: 79 },
       "12": { prime: 149, orig: 199, battery: 79, back: 89, glas: 79, cam: 79, camglas: 89 },
-      "12 Pro": { prime: 169, orig: 229, battery: 79, back: 99, glas: 89, cam: 79, camglas: 89 },
+      "12 Pro": { prime: 119, orig: 149, battery: 79, back: 99, glas: 89, cam: 79, camglas: 89 },
       "12 Pro Max": { prime: 189, orig: 249, battery: 79, back: 109, glas: 89, cam: 79, camglas: 89 },
       "13 Mini": { prime: 149, orig: 199, battery: 79, back: 99, glas: 89, cam: 79, camglas: 89 },
       "13": { prime: 159, orig: 209, battery: 79, back: 109, glas: 99, cam: 89, camglas: 99 },
@@ -652,7 +652,7 @@ export default function DailyPhoneLanding() {
             Daily<span className="text-[#87CEEB]">Phone</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-200 mb-12 max-w-3xl mx-auto font-light">
-            Berlins schnellster Handy-Reparaturservice
+            Berlins schnellster Handy-Reparaturservice ohne Termin 
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button
