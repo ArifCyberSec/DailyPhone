@@ -1252,6 +1252,10 @@ export default function DailyPhoneLanding() {
               </div>
             </div>
           </div>
+          <div className="mt-6 text-sm text-gray-400 space-x-4">
+            <a href="/impressum" className="hover:underline">Impressum</a>
+            <a href="/agb" className="hover:underline">AGB</a>
+          </div>
 
           <div className="border-t border-slate-700 mt-8 pt-8 text-center text-gray-400 text-sm">
             <p>&copy; {new Date().getFullYear()} DailyPhone Berlin. Alle Rechte vorbehalten.</p>
