@@ -208,6 +208,20 @@ export default function DailyPhoneLanding() {
         "iPhone 11 Pro Max",
         "iPhone 11 Pro",
         "iPhone 11",
+        "iPhone XR MAx",
+        "iPhone XS",
+        "iPhone XR",
+        "iPhone X",
+        "iPhone SE",
+        "iPhone 8 Plus",
+        "iPhone 8",
+        "iPhone 7 Plus",
+        "iPhone 7",
+        "iPhone 6 Plus",
+        "iPhone 6s",
+        "iPhone 6",
+        
+
       ],
       samsung: [
         "Galaxy S24 Ultra",
