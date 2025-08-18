@@ -281,17 +281,7 @@ export default function DailyPhoneLanding() {
         "Reno 10",
       ],
       oneplus: ["12 Pro", "12", "11 Pro", "11", "10 Pro", "10T", "10", "9 Pro", "9", "8 Pro", "8T", "8"],
-      google: [
-        "Pixel 8 Pro",
-        "Pixel 8",
-        "Pixel 7 Pro",
-        "Pixel 7",
-        "Pixel 6 Pro",
-        "Pixel 6",
-        "Pixel 5",
-        "Pixel 4 XL",
-        "Pixel 4",
-      ],
+     
     }
     return models[brand] || []
   }
