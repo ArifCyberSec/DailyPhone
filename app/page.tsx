@@ -709,12 +709,13 @@ export default function DailyPhoneLanding() {
                     </SelectTrigger>
                     <SelectContent className="border-[#87CEEB] bg-white text-slate-800 shadow-xl">
   <SelectItem value="iphone" className="hover:bg-[#87CEEB]/20">iPhone</SelectItem>
-  <SelectItem value="samsung" className="hover:bg-[#87CEEB]/20">Samsung Galaxy</SelectItem>
+ 
 
   <div className="px-3 py-2 pl-8 text-sm text-gray-500 font-medium opacity-70 cursor-default select-none">
     Sonstige Marken (bitte telefonisch anfragen)
   </div>
                       {/* 
+                      <SelectItem value="samsung" className="hover:bg-[#87CEEB]/20">Samsung Galaxy</SelectItem>
                        <SelectItem value="huawei" className="hover:bg-[#87CEEB]/20">Huawei</SelectItem>
   <SelectItem value="xiaomi" className="hover:bg-[#87CEEB]/20">Xiaomi</SelectItem>
   <SelectItem value="oppo" className="hover:bg-[#87CEEB]/20">OPPO</SelectItem>
