@@ -180,11 +180,9 @@ export default function DailyPhoneLanding() {
     const brandNames: { [key: string]: string } = {
       iphone: "iPhone",
       samsung: "Samsung Galaxy",
-      huawei: "Huawei",
-      xiaomi: "Xiaomi",
-      oppo: "OPPO",
-      oneplus: "OnePlus",
-      google: "Google Pixel",
+      other: "Sonstige Marken (bitte anfragen)"
+
+
     }
     return brandNames[brand] || brand
   }
@@ -220,7 +218,7 @@ export default function DailyPhoneLanding() {
         "iPhone 6 Plus",
         "iPhone 6s",
         "iPhone 6",
-        
+
 
       ],
       samsung: [
@@ -281,7 +279,17 @@ export default function DailyPhoneLanding() {
         "Reno 10",
       ],
       oneplus: ["12 Pro", "12", "11 Pro", "11", "10 Pro", "10T", "10", "9 Pro", "9", "8 Pro", "8T", "8"],
-     
+      google: [
+        "Pixel 8 Pro",
+        "Pixel 8",
+        "Pixel 7 Pro",
+        "Pixel 7",
+        "Pixel 6 Pro",
+        "Pixel 6",
+        "Pixel 5",
+        "Pixel 4 XL",
+        "Pixel 4",
+      ],
     }
     return models[brand] || []
   }
@@ -301,11 +309,11 @@ export default function DailyPhoneLanding() {
   const getPriceForSelection = (brand: string, model: string, service: string) => {
     // Vollständiger Preisbaum für iPhone-Modelle (alle Preise bereits um 5 € reduziert)
     const iphonePrices: any = {
-      "SE": { prime: 89, orig: 89, battery: 59, back: 119, glas:119, cam: 79, camglas: 59 },
+      "SE": { prime: 89, orig: 89, battery: 59, back: 119, glas: 119, cam: 79, camglas: 59 },
       "6": { prime: 59, orig: 59, battery: 39, back: 0, glas: 0, cam: 49, camglas: 0 },
-      "6 Plus": {  prime: 59, orig: 59, battery: 39, back: 0, glas: 0, cam: 49, camglas: 0 },
-      "6s": { prime: 59, orig: 59, battery: 39, back: 0, glas: 0, cam: 49, camglas: 0  },
-      "6s Plus": {  prime: 59, orig: 59, battery: 39, back: 0, glas: 0, cam: 49, camglas: 0 },
+      "6 Plus": { prime: 59, orig: 59, battery: 39, back: 0, glas: 0, cam: 49, camglas: 0 },
+      "6s": { prime: 59, orig: 59, battery: 39, back: 0, glas: 0, cam: 49, camglas: 0 },
+      "6s Plus": { prime: 59, orig: 59, battery: 39, back: 0, glas: 0, cam: 49, camglas: 0 },
       "7": { prime: 79, orig: 79, battery: 49, back: 109, glas: 109, cam: 69, camglas: 39 },
       "7 Plus": { prime: 69, orig: 79, battery: 29, back: 49, glas: 49, cam: 49, camglas: 49 },
       "8": { prime: 69, orig: 89, battery: 29, back: 59, glas: 49, cam: 49, camglas: 49 },
@@ -656,18 +664,18 @@ export default function DailyPhoneLanding() {
             Daily<span className="text-[#87CEEB]">Phone</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-200 mb-12 max-w-3xl mx-auto font-light">
-            Berlins schnellster Handy-Reparaturservice ohne Termin 
+            Berlins schnellster Handy-Reparaturservice ohne Termin
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button
-             
+
               className="bg-[#87CEEB] hover:bg-[#6BB6D6] text-slate-800 px-8 py-4 text-lg font-semibold rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
               onClick={() => scrollToSection("preise")}
             >
               Preise ansehen
             </Button>
             <Button
-              
+
               className="border-2 border-[#87CEEB] text-[#87CEEB] hover:bg-[#87CEEB] hover:text-slate-800 px-8 py-4 text-lg font-semibold rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 bg-transparent"
               onClick={() => window.open("https://wa.me/03023320906", "_blank")}
             >
@@ -699,14 +707,20 @@ export default function DailyPhoneLanding() {
                     <SelectTrigger className="w-full h-12 text-lg shadow-lg border-2 border-[#87CEEB] focus:ring-2 focus:ring-[#87CEEB] rounded-lg bg-white text-slate-800 placeholder:text-gray-500">
                       <SelectValue placeholder="Marke auswählen..." />
                     </SelectTrigger>
-                   <SelectContent className="border-[#87CEEB] bg-white text-slate-800 shadow-xl">
-                      <SelectItem value="iphone" className="hover:bg-[#87CEEB]/20">iPhone</SelectItem>
-                      <SelectItem value="samsung" className="hover:bg-[#87CEEB]/20">Samsung Galaxy</SelectItem>
-                      <SelectItem value="huawei" className="hover:bg-[#87CEEB]/20">Huawei</SelectItem>
-                      <SelectItem value="xiaomi" className="hover:bg-[#87CEEB]/20">Xiaomi</SelectItem>
-                      <SelectItem value="oppo" className="hover:bg-[#87CEEB]/20">OPPO</SelectItem>
-                      <SelectItem value="oneplus" className="hover:bg-[#87CEEB]/20">OnePlus</SelectItem>
-                      <SelectItem value="google" className="hover:bg-[#87CEEB]/20">Google Pixel</SelectItem>
+                    <SelectContent className="border-[#87CEEB] bg-white text-slate-800 shadow-xl">
+  <SelectItem value="iphone" className="hover:bg-[#87CEEB]/20">iPhone</SelectItem>
+  <SelectItem value="samsung" className="hover:bg-[#87CEEB]/20">Samsung Galaxy</SelectItem>
+
+  <div className="px-3 py-2 pl-8 text-sm text-gray-500 font-medium opacity-70 cursor-default select-none">
+    Sonstige Marken (bitte telefonisch anfragen)
+  </div>
+                      {/* 
+                       <SelectItem value="huawei" className="hover:bg-[#87CEEB]/20">Huawei</SelectItem>
+  <SelectItem value="xiaomi" className="hover:bg-[#87CEEB]/20">Xiaomi</SelectItem>
+  <SelectItem value="oppo" className="hover:bg-[#87CEEB]/20">OPPO</SelectItem>
+  <SelectItem value="oneplus" className="hover:bg-[#87CEEB]/20">OnePlus</SelectItem>
+  <SelectItem value="google" className="hover:bg-[#87CEEB]/20">Google Pixel</SelectItem>
+  */}
                     </SelectContent>
                   </Select>
                 </div>
