@@ -2,7 +2,9 @@
 
 import type React from "react"
 import Image from "next/image"
+import Script from "next/script"
 import { Smartphone } from "lucide-react"
+
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
@@ -492,7 +494,26 @@ export default function DailyPhoneLanding() {
   }
 
   return (
-    <div className="min-h-screen bg-white">
+    <>
+      {/* Google Analytics / Ads Tag */}
+      <Script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-0N7YNLCVJD"
+        strategy="afterInteractive"
+      />
+      <Script
+        id="google-analytics"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-0N7YNLCVJD');
+          `,
+        }}
+      />
+      <div className="min-h-screen bg-white">
       {/* Header */}
       <header className="bg-slate-800 shadow-lg relative z-50">
         <div className="container mx-auto px-4">
@@ -1281,6 +1302,7 @@ export default function DailyPhoneLanding() {
           </div>
         </div>
       </footer>
-    </div>
+      </div>
+    </>
   )
 }
