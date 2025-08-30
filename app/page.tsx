@@ -1050,7 +1050,7 @@ export default function DailyPhoneLanding() {
                 </div>
                 <Button
                   className="w-full border-2 border-[#87CEEB] text-[#87CEEB] hover:bg-[#87CEEB] hover:text-slate-800 shadow-lg hover:shadow-xl transition-all duration-300 rounded-full bg-transparent"
-                  onClick={() => window.open("https://maps.google.com/?q=Pallastraße+25,+10781+Berlin", "_blank")}
+                  onClick={() => window.open("https://www.google.com/maps/place/DailyPhone+-+Handyreparatur+Laden+in+Berlin/@52.4945341,13.3531479,17z/data=!3m1!4b1!4m6!3m5!1s0x47a85103ebfddd11:0x5ad98d095c58d8b3!8m2!3d52.4945309!4d13.3557282!16s%2Fg%2F11xmjx_cqt?entry=ttu&g_ep=EgoyMDI1MDgyNS4wIKXMDSoASAFQAw%3D%3D", "_blank")}
                 >
                   <MapPin className="h-4 w-4 mr-2" />
                   In Google Maps öffnen
