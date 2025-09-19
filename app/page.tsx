@@ -1286,7 +1286,9 @@ export default function DailyPhoneLanding() {
               <div className="space-y-2 text-gray-400 text-sm">
                 <p>Pallastraße 25, 10781 Berlin</p>
                 <p>Telefon: 03023320906</p>
-                <p>Mo-Sa: 10:00-20:00</p>
+                <p>Mo-Do: 10:30-20:00</p>
+                <p>Fr: 10:30-15:00 / 17:00 - 20:00</p>
+                <p>Sa: 10:30 - 20:00</p>
                 <p>So: Geschlossen</p>
                 <p>dailyphonestore@gmail.com</p>
               </div>
