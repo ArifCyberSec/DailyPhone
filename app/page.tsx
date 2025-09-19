@@ -1068,8 +1068,20 @@ export default function DailyPhoneLanding() {
               <CardContent className="space-y-4">
                 <div className="space-y-3">
                   <div className="flex justify-between">
-                    <span className="font-semibold text-slate-800">Montag - Samstag</span>
-                    <span className="text-slate-800 font-semibold">10:00 - 20:00</span>
+                    <span className="font-semibold text-slate-800">Montag - Donnerstag</span>
+                    <span className="text-slate-800 font-semibold">10:30 - 20:00</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="font-semibold text-slate-800">Freitag</span>
+                    <span className="text-slate-800 font-semibold">10:30 - 15:00</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="font-semibold text-slate-800"></span>
+                    <span className="text-slate-800 font-semibold">17:00 - 20:00</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="font-semibold text-slate-800">Samstag</span>
+                    <span className="text-slate-800 font-semibold">10:30 - 20:00</span>
                   </div>
                   <div className="flex justify-between">
                     <span className="font-semibold text-slate-800">Sonntag</span>
