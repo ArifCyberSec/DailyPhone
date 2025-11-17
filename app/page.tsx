@@ -1066,28 +1066,16 @@ export default function DailyPhoneLanding() {
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
-                <div className="space-y-3">
-                  <div className="flex justify-between">
-                    <span className="font-semibold text-slate-800">Montag - Donnerstag</span>
-                    <span className="text-slate-800 font-semibold">10:30 - 20:00</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="font-semibold text-slate-800">Freitag</span>
-                    <span className="text-slate-800 font-semibold">10:30 - 15:00</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="font-semibold text-slate-800"></span>
-                    <span className="text-slate-800 font-semibold">17:00 - 20:00</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="font-semibold text-slate-800">Samstag</span>
-                    <span className="text-slate-800 font-semibold">10:30 - 20:00</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="font-semibold text-slate-800">Sonntag</span>
-                    <span className="text-red-600 font-semibold">Geschlossen</span>
-                  </div>
-                </div>
+               <div className="space-y-3">
+  <div className="flex justify-between">
+    <span className="font-semibold text-slate-800">Montag - Samstag</span>
+    <span className="text-slate-800 font-semibold">10:30 - 18:00</span>
+  </div>
+  <div className="flex justify-between">
+    <span className="font-semibold text-slate-800">Sonntag</span>
+    <span className="text-red-600 font-semibold">Geschlossen</span>
+  </div>
+</div>
               </CardContent>
             </Card>
           </div>
@@ -1297,10 +1285,8 @@ export default function DailyPhoneLanding() {
               <h4 className="font-semibold mb-4 text-[#87CEEB]">Kontakt</h4>
               <div className="space-y-2 text-gray-400 text-sm">
                 <p>Pallastraße 25, 10781 Berlin</p>
-                <p>Telefon: 03023320906</p>
-                <p>Mo-Do: 10:30-20:00</p>
-                <p>Fr: 10:30-15:00 / 17:00 - 20:00</p>
-                <p>Sa: 10:30 - 20:00</p>
+                <p>Telefon: 03023535168</p>
+                <p>Mo-Sa: 10:30-18:00</p>
                 <p>So: Geschlossen</p>
                 <p>dailyphonestore@gmail.com</p>
               </div>
